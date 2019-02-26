@@ -9,13 +9,16 @@ html, body {
     margin: 0;
 }
 
-.navbar{
-    display: flex;
-    padding: 10px;
+.navbar, .container{
     max-width: 1140px;
     width: 100%;
     margin: 0 auto;/*make elements in the center*/
+}
+
+.navbar{
+    display: flex;
     justify-content: space-between;
+    padding: 10px;
 }
 
 .topnav{
@@ -48,6 +51,112 @@ html, body {
     display: none;
 }
 
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+.headershot-wrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.headershot-wrapper .headShot{
+    border-radius: 50%;
+    max-width: 200px;
+    max-height: 250px;
+    width: 100%;
+}
+
+.services{
+    background-color: #f1f3fa;
+    padding: 4rem 1rem;
+}
+
+.media-object{
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.icon-wapper-left, .icon-wapper-right{
+    flex: 1;
+    display: flex;/* to be able to center this content we ned to be display flex*/
+    justify-content: center;
+}
+
+.icon-wrapper-left, .blurb-wrapper-left{
+    order: 1;
+}
+
+.icon-wapper-right, .blurb-wrapper-right{
+    order:2;
+}
+
+.icon-wapper-left img{
+    width: 180px;
+}
+
+.blurb-wrapper-left, .blurb-wrapper-right{
+    flex: 1;
+}
+
+.blurb-header{
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.blurb-info{
+    color: #646e90;
+    font-size: 18px;
+}
+
+
+.quote-btn-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.quote-btn-wrapper .quote-btn{
+    color: white;
+    background-color: #66b6d3;
+    font-size: 18px;
+    border: none;
+    padding: .8rem 4rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,.4); /*x , y, spread*/
+}
+
+.section-header .header{
+    text-align: center;
+    padding: 6rem 0 6rem;
+}
+
+.portfolio-wrapper{
+    display: flex;
+    max-width: 250px;
+}
+
+.portfolio-object{
+    max-width: 250px;
+}
+
+.portofolio-box{
+    width: 250px;
+    height: 250px;
+    background-color: #f1f3fa;
+    transition: .2s ease-in-out;
+}
+
+.portofolio-box:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+/*Mobile View*/
 @media (max-width: 768px){
     ul.topnav li a.nav-link{
         display: none;
@@ -62,14 +171,23 @@ html, body {
 
     ul.topnav li.dropdownLink a{
         text-decoration: none;
-    }
-
-    ul.topnav.responsive li a{
-        display: block;
+        color: black;
     }
 
     ul.topnav.responsive{
        flex-direction: column;
+    }
+
+    /* ul.topnav.responsive li{
+     
+    } */
+
+    ul.topnav.responsive li a.nav-link{
+        display: block;
+        position: relative;
+        top: 30px;
+        right:30px;
+        line-height: 2;
     }
 }
 
